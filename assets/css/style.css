@@ -3,10 +3,15 @@
     padding: 0;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-image: url("../img/background.jpg");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -60,7 +65,7 @@ img.img {
 }
 
 li:hover img.img {
-    filter: blur(1px);
+    filter: blur(0px);
     transform: scale(1.1);
 }
 
@@ -68,5 +73,19 @@ li:hover h2 {
     font-size: 2.5em;
 }
 
-li.dir:hover {
+::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+}
+::-webkit-scrollbar-thumb{
+    background: #B3AFB3;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #B3AFB3;
+}
+::-webkit-scrollbar-track{
+    background: #313131;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #313131;
 }

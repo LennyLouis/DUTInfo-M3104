@@ -15,7 +15,7 @@
                 $dirs = array_filter(glob('*'), 'is_dir');
                 foreach ($dirs as $dir) {
                     if($dir!="tmp" && $dir!="assets"){?>
-                        <li class="dir"><a href="<?= $dir ?>"><img class="img" src="assets/img/<?= $dir ?>.png" alt="" /><h2><?= $dir ?></h2></a></li>
+                        <li class="dir"><a href="<?= $dir ?>/index.php"><img class="img" src="assets/img/<?= $dir ?>.png" alt="" /><h2><?= $dir ?></h2></a></li>
                     <?php }
                 }
                 ?>
