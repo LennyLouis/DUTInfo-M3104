@@ -1,0 +1,22 @@
+ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+}
+
+.pizzaImg {
+    width: 350px;
+}
+
+.pizzaList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.pizzaList > .pizza {
+    flex: 1 1 160px;
+}

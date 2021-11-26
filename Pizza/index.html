@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo.png" alt="Logo">
+    </header>
+    <div>
+        <input type="text" name="search" id="searchInput" oninput="actualisaLasPizzas()" placeholder="Rechercher une pizza...">
+        <div class="pizzaList" id="listPizza">
+
+        </div>
+    </div>
+    <script>
+        function actualisaLasPizzas(){
+            var xhr;
+            var saisie;
+
+            xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function(){
+                if((xhr.readyState == 4) && (xhr.status == 200)){
+                    document.getElementById("listPizza").innerHTML = xhr.responseText;
+                }
+            };
+
+
+            saisie = document.getElementById("searchInput").value;
+            xhr.open("GET", "pizzaAPI.php?search="+saisie, true);
+            xhr.send(null);
+        }
+        actualisaLasPizzas();
+    </script>
+</body>
+</html>
