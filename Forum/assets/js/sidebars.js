@@ -36,9 +36,9 @@ function changePage(page) {
             document.getElementById('nav-link-forum').classList.add('active');
             getPageContentId('pageContent', 'view/forum.php');
             break;
-        case 'profil':
-            document.getElementById('nav-link-profil').classList.add('active');
-            getPageContentId('pageContent', 'view/profil.php');
+        case 'profile':
+            document.getElementById('nav-link-profile').classList.add('active');
+            getPageContentId('pageContent', 'view/profile.php');
             break;
         case 'login':
             disableAllButton();
@@ -49,6 +49,3 @@ function changePage(page) {
             break;
     }
 }
-
-// Go to the default page
-changePage('home');

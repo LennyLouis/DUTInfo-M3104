@@ -26,6 +26,12 @@ if (isset($_SESSION['user-session'])&&is_a($_SESSION['user-session'], 'User')) {
     <!-- Custom styles for this template -->
     <link href="assets/css/sidebars.css" rel="stylesheet">
     <link href="assets/css/login.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+    <script src="assets/js/sidebars.js"></script>
 </head>
 <body id="body">
 
@@ -131,7 +137,7 @@ if (isset($_SESSION['user-session'])&&is_a($_SESSION['user-session'], 'User')) {
             </li>
             <li>
                 <a href="#" class="nav-link py-3 border-bottom" title="Customers" data-bs-toggle="tooltip"
-                   data-bs-placement="right" id="nav-link-profil" onclick="changePage('profil')">
+                   data-bs-placement="right" id="nav-link-profile" onclick="changePage('profile')">
                     <svg class="bi" width="24" height="24" role="img" aria-label="Customers">
                         <use xlink:href="#people-circle"/>
                     </svg>
@@ -156,7 +162,7 @@ if (isset($_SESSION['user-session'])&&is_a($_SESSION['user-session'], 'User')) {
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#" onclick="changePage('profil')">Profile</a></li>
+                <li><a class="dropdown-item" href="#" onclick="changePage('profile')">Profile</a></li>
                 <li><a class="dropdown-item" href="#" onclick="changePage('settings')">Settings</a></li>
                 <li>
                     <hr class="dropdown-divider">
@@ -175,14 +181,11 @@ if (isset($_SESSION['user-session'])&&is_a($_SESSION['user-session'], 'User')) {
 
     </page-content>
 </main>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-
-<script src="assets/js/sidebars.js"></script>
 </body>
+<script>
+    // Go to the default page
+    changePage('home');
+</script>
 </html>
 <?php
 
